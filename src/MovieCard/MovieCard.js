@@ -1,11 +1,11 @@
 import React from 'react'
 import './MovieCard.css'
 
-function MovieCard({movie,}) {
+function MovieCard() {
   return (
     <div className='movieCard'>
       <img src='' alt='' />
-      <h2></h2>
+      <h2>Movies</h2>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 const API_Key = '30b033655413f99444343fc0148ecfa4'
 
-export default {
-  fetchTrending:`/trending/all/week?api_key=${API_Key}$language=en-US`,
+const endpoints={
+  fetchTrending:`https://api.themoviedb.org/3/trending/all/week?api_key=${API_Key}$language=en-US`,
   fetchTopRated:`/movie/top_rated?api_keys=${API_Key}$language=en-US`,
   fetchActionMovies: `/discover/?api_keys=${API_Key}$with_genres=28`,
   fetchComedyMovies: `/discover/?api_keys=${API_Key}$with_genres=35`,
@@ -13,3 +13,5 @@ export default {
   fetchAnimation:`/discover/?api_keys=${API_Key}$with_genres=16`,
   fetchTv:`/discover/?api_keys=${API_Key}$with_genres=10770,`
 }
+
+export default endpoints

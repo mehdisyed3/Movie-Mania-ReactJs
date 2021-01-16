@@ -1,4 +1,4 @@
-const API_Key = '30b033655413f99444343fc0148ecfa4'
+const API_Key = '041da1702f14e5501a7c9afbe680dcaf'
 
 const endpoints={
   fetchTrending:`https://api.themoviedb.org/3/trending/all/week?api_key=${API_Key}$language=en-US`,

@@ -15,12 +15,13 @@ function Results() {
       // setMovies(request?.data.results)
 
       // return request 
-      const url = 'https://api.themoviedb.org/3' + requests.fetchActionMovies
+      //'https://api.themoviedb.org/3/movie/top_rated?api_keys=041da1702f14e5501a7c9afbe680dcaf$language=en-US'
+      const url = requests.fetchTrending
       console.log("URRRLLL",url)
       try {
         
 
-        const response = await fetch(url)
+        const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_keys=041da1702f14e5501a7c9afbe680dcaf$language=en-US')
         const data = await response?.json()
      
 
@@ -28,7 +29,7 @@ function Results() {
        
     }
       catch (er) {
-
+      
       }
 
 

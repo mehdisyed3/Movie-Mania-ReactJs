@@ -1,34 +1,51 @@
 import React, { useState,useEffect } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 import './Results.css'
-
+import axios from '../axios'
 import requests from '../requests'
 
 function Results() {
-  const [movies,setMovies] = useState(["hello"])
+  const [movies,setMovies] = useState([])
 
-  useEffect(async () => {
-    try {
-      const response = await fetch(requests.fetchTrending)
-      const data = await response.json()
+  useEffect(() => {
+    const fetchData = async () =>{
 
-      console.log(data)
-      
-    }
-    catch (er) {
-      console.log(er)
-    }
+      // const request = await axios.get(requests.fetchTopRated)
+
+      // setMovies(request?.data.results)
+
+      // return request 
+      const url = 'https://api.themoviedb.org/3' + requests.fetchActionMovies
+      console.log("URRRLLL",url)
+      try {
+        
+
+        const response = await fetch(url)
+        const data = await response?.json()
+     
+
+        setMovies(data)
        
-  }, [movies])
+    }
+      catch (er) {
+
+      }
+
+
+    }
+    return fetchData()
+
+    
+  }, [])
 
   console.log("FETCHHHH",movies)
 
-  const displayMovies = movies.map((item)=> <MovieCard /> )
+  // const displayMovies = movies.map((item)=> <MovieCard /> )
 
   return (
 
     <div className='results'>
-      {displayMovies}
+      {/* {displayMovies} */}
     </div>
   )
 }

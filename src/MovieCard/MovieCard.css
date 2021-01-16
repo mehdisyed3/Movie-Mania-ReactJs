@@ -1,0 +1,22 @@
+.movieCard{
+  color:white;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+}
+
+.movieCard :hover{
+  transform: scale(1.09);
+  transition: transform 100ms;
+}
+
+.movieCard > img {
+  height:300px;
+  object-fit: contain;
+  width: 500px;
+}
+
+.movieCard > h2 {
+  padding-top: 10px;
+}
+

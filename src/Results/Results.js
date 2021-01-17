@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 import './Results.css'
-import axios from '../axios'
-import requests from '../requests'
+import axios from 'axios'
+// import requests from '../requests'
 
 function Results() {
   const [movies,setMovies] = useState([])
@@ -10,43 +10,26 @@ function Results() {
   useEffect(() => {
     const fetchData = async () =>{
 
-      // const request = await axios.get(requests.fetchTopRated)
+      const req = await axios.get('https://api.themoviedb.org/3/trending/all/week?api_key=041da1702f14e5501a7c9afbe680dcaf&region=US&with_release_type=4|1')
 
-      // setMovies(request?.data.results)
-
-      // return request 
-      //'https://api.themoviedb.org/3/movie/top_rated?api_keys=041da1702f14e5501a7c9afbe680dcaf$language=en-US'
-      const url = requests.fetchTrending
-      console.log("URRRLLL",url)
-      try {
-        
-
-        const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_keys=041da1702f14e5501a7c9afbe680dcaf$language=en-US')
-        const data = await response?.json()
-     
-
-        setMovies(data)
-       
-    }
-      catch (er) {
-      
-      }
-
+      setMovies(req.data.results)
 
     }
     return fetchData()
 
+
+    
     
   }, [])
 
-  console.log("FETCHHHH",movies)
-
-  // const displayMovies = movies.map((item)=> <MovieCard /> )
-
+  
+  const displayMovies = movies.map(item => <MovieCard key={item.id} movie={item} />)
+  
+  console.log(">>>>>", movies)
   return (
 
     <div className='results'>
-      {/* {displayMovies} */}
+      {displayMovies}
     </div>
   )
 }

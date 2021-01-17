@@ -3,11 +3,22 @@
   width: 500px;
   height: 400px;
   padding: 20px;
+  transition: transform 100ms;
 }
+
+.movieCard__stats{
+  display: none;
+}
+
 
 .movieCard :hover{
   transform: scale(1.09);
-  transition: transform 100ms;
+}
+
+
+.movieCard :hover > .movieCard__stats {
+  display: inline;
+
 }
 
 .movieCard > img {
@@ -19,4 +30,5 @@
 .movieCard > h2 {
   padding-top: 10px;
 }
+
 

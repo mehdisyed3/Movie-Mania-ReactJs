@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 import './Results.css'
 import axios from 'axios'
-// import requests from '../requests'
+import requests from '../requests'
 
 function Results() {
   const [movies,setMovies] = useState([])
@@ -10,7 +10,7 @@ function Results() {
   useEffect(() => {
     const fetchData = async () =>{
 
-      const req = await axios.get('https://api.themoviedb.org/3/trending/all/week?api_key=041da1702f14e5501a7c9afbe680dcaf&region=US&with_release_type=4|1')
+      const req = await axios.get(requests.fetchTrending)
 
       setMovies(req.data.results)
 

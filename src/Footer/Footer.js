@@ -6,7 +6,7 @@ function Footer() {
         <div className="footer">
       <div className="footer__container">
         <p>
-        © 2021 Syed Mehdi.{" "}
+        © 2021 Movie Mania. Design & developed Syed Mehdi.{" "}
           <a
             href="https://github.com/mehdisyed3/Movie-Mania"
             target="_blank"

@@ -32,6 +32,8 @@
   margin-right: auto;
   font-size: small;
   font-weight: 300;
+  color:#6add60
+
 }
 
 .header__icon:hover > p {
@@ -43,6 +45,7 @@
   margin-left: auto;
   margin-right: auto;
   font-size: 30px;
+
  
 
 }
@@ -60,4 +63,5 @@
 .header > img{
   height:30px;
   object-fit: contain;
+
 }

@@ -4,9 +4,10 @@
   padding-bottom: 20px;
   border-top: 1px solid #6add60;
   justify-content: center;
+  height: 50px;
 }
 
-.footer-container {
+.footer__container {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -15,6 +16,7 @@
 
 
 .footer__container > p {
+    margin-top: 20px;
     color: #7f8788;
     font-weight: 400;
     font-size: 14px;

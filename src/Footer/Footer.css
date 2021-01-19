@@ -1,6 +1,9 @@
 .footer {
-  padding-top: 14px;
+  display: flex;
+  padding-top: 20px;
   padding-bottom: 20px;
+  border-top: 1px solid #6add60;
+  justify-content: center;
 }
 
 .footer-container {
@@ -22,8 +25,8 @@
     color: #6add60;
 }
 
-/* @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .footer > .footer-container > p {
     font-size: 12px;
   }
-} */
+}

@@ -7,12 +7,12 @@ function Footer() {
       <div className="footer__container">
         <p>
           Developed by Syed Mehdi.{" "}
-          {/* <a
-            href="https://github.com/mehdisyed3"
+          <a
+            href="https://github.com/mehdisyed3/Movie-Mania"
             target="_blank"
           >
             Click
-          </a>{" "} */}
+          </a>{" "}
           for source codes.
         </p>
       </div>

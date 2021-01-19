@@ -7,7 +7,7 @@
 }
 
 .movieCard__stats{
-  display: none;
+  display: inline;
     align-items: center;
     justify-content: space-between;
 }

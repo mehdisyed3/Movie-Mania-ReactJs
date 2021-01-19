@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{forwardRef} from 'react'
 import './MovieCard.css'
 import TextTruncate from 'react-text-truncate'
 import ThumbUpSharp from '@material-ui/icons/ThumbUpAltSharp'
@@ -6,12 +6,12 @@ import { MovieCreation, MovieSharp } from '@material-ui/icons'
 
 const base_url = 'https://image.tmdb.org/t/p/original/'
 
-function MovieCard({ movie }) {
+const MovieCard = forwardRef(({ movie }, ref) => {
   console.log({ movie })
   // console.log("EACH COMPONENT", movie)
   return (
 
-    <div className='movieCard'>
+    <div ref={ref} className='movieCard'>
       <img src={`${base_url}${movie.backdrop_path || movie.poster_path}`} alt='movie poster' />
       <TextTruncate
         line={1}
@@ -28,6 +28,6 @@ function MovieCard({ movie }) {
       </p>
     </div>
   )
-}
+})
 
 export default MovieCard

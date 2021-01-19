@@ -1,14 +1,15 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 import './Results.css'
 import axios from 'axios'
-import requests from '../requests'
+import FlipMove from "react-flip-move"
+// import requests from '../requests'
 
-function Results({selectedOption}) {
-  const [movies,setMovies] = useState([])
+function Results({ selectedOption }) {
+  const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    const fetchData = async () =>{
+    const fetchData = async () => {
 
       const req = await axios.get(selectedOption)
 
@@ -18,18 +19,20 @@ function Results({selectedOption}) {
     return fetchData()
 
 
-    
-    
+
+
   }, [selectedOption])
 
-  
-  const displayMovies = movies.map(item => <MovieCard key={item.id} movie={item} />)
-  
+
+  const displayMovies = movies.map(item => <FlipMove><MovieCard key={item.id} movie={item} /></FlipMove> )
+
   console.log(">>>>>", movies)
   return (
 
     <div className='results'>
-      {displayMovies}
+      
+        {displayMovies}
+    
     </div>
   )
 }

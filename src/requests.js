@@ -3,7 +3,7 @@ const API_Key = '041da1702f14e5501a7c9afbe680dcaf'
 const endpoints={
   fetchTrending:`https://api.themoviedb.org/3/trending/all/week?api_key=041da1702f14e5501a7c9afbe680dcaf&region=US&with_release_type=4|1`,
   fetchTopRated:`https://api.themoviedb.org/3/movie/top_rated?api_key=041da1702f14e5501a7c9afbe680dcaf&region=US&with_release_type=4|1`,
-  fetchActionMovies: `https://api.themoviedb.org/3/discover/?api_key=041da1702f14e5501a7c9afbe680dcaf$with_genres=28`,
+  fetchActionMovies: `https://api.themoviedb.org/3/discover/?api_key=041da1702f14e5501a7c9afbe680dcaf&language=en-US$with_genres=28`,
   fetchComedyMovies: `https://api.themoviedb.org/3/discover/?api_key=041da1702f14e5501a7c9afbe680dcaf$with_genres=35`,
   fetchHorrorMovies: `https://api.themoviedb.org/3/discover/?api_key=01da1702f14e5501a7c9afbe680dcaf$with_genres=27`,
   fetchRomanticMovies:`https://api.themoviedb.org/3/discover/?api_key=041da1702f14e5501a7c9afbe680dcaf$with_genres=10749`,

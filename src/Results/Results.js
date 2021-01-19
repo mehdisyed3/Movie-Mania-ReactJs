@@ -20,7 +20,7 @@ function Results({selectedOption}) {
 
     
     
-  }, [])
+  }, [selectedOption])
 
   
   const displayMovies = movies.map(item => <MovieCard key={item.id} movie={item} />)

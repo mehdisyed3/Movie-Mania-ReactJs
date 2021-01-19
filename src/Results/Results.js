@@ -4,13 +4,13 @@ import './Results.css'
 import axios from 'axios'
 import requests from '../requests'
 
-function Results() {
+function Results({selectedOption}) {
   const [movies,setMovies] = useState([])
 
   useEffect(() => {
     const fetchData = async () =>{
 
-      const req = await axios.get(requests.fetchTrending)
+      const req = await axios.get(selectedOption)
 
       setMovies(req.data.results)
 

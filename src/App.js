@@ -5,6 +5,8 @@ import Header from './Header/Header';
 import Navbar from './Navbar/Navbar';
 import Results from './Results/Results';
 import requests from './requests'
+import Footer from './Footer/Footer';
+
 
 
 //58 42
@@ -18,6 +20,7 @@ function App() {
       <Header />
       <Navbar setSelectedOption={setSelectedOption} />
       <Results selectedOption ={selectedOption} />
+      <Footer />
     </div>
   );
 }

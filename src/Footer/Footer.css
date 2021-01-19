@@ -1,0 +1,29 @@
+.footer {
+  padding-top: 14px;
+  padding-bottom: 20px;
+}
+
+.footer-container {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.footer__container > p {
+    color: #7f8788;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer__container > p > a {
+    text-decoration: none;
+    color: #6add60;
+}
+
+/* @media screen and (max-width: 500px) {
+  .footer > .footer-container > p {
+    font-size: 12px;
+  }
+} */

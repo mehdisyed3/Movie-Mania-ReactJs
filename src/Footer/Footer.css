@@ -28,7 +28,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .footer > .footer-container > p {
+  .footer > .footer-container > p{
     font-size: 12px;
   }
 }

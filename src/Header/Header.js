@@ -42,8 +42,11 @@ function Header() {
           <PersonOutlineIcon />
           <p>Account</p>
         </div>
+
       </div>
+
       <img className="header__logo" src='https://www.seekpng.com/png/full/1-19750_instagram-white-logo-instagram-logo-png-white-outline.png' alt='' />
+
     </div>
   )
 }

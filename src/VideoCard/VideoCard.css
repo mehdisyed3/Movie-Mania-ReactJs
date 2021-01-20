@@ -30,7 +30,6 @@
     display: inline;
 }
 
-
 @media (max-width: 700px) {
   .videoCard > img {
     width: 100%;

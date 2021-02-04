@@ -18,7 +18,6 @@ function Results({ selectedOption }) {
    
     return fetchData()
 
-
   }, [selectedOption])
 
   const displayMovies = movies.map(item => <FlipMove><VideoCard key={item.id} movie={item} /></FlipMove> )
